@@ -91,6 +91,8 @@ Wait for a couple of minutes for ERPNext site to be created or check `create-sit
 
 ### [Container Setup Overview](docs/02-setup/01-overview.md)
 
+### [Custom App Production Deployment](docs/03-production/04-custom-app-deployment.md)
+
 ### [Development](docs/05-development/01-development.md)
 
 ## Contributing

@@ -849,6 +849,7 @@ Many teams use both: Frappe for back-office/admin tools, Django for customer-fac
 ### Key Files in This Repository
 
 - [`docs/development.md`](development.md) - Detailed development setup
+- [`docs/03-production/04-custom-app-deployment.md`](03-production/04-custom-app-deployment.md) - **Custom app production deployment guide**
 - [`docs/container-setup/env-variables.md`](container-setup/env-variables.md) - Environment variable reference
 - [`docs/single-server-example.md`](single-server-example.md) - Production deployment guide
 - [`docs/site-operations.md`](site-operations.md) - Common site management tasks
