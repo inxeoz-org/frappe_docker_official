@@ -109,13 +109,13 @@ docker build \
 
 **Important Build Args:**
 
-| Arg                | Purpose                                    | Example                                  |
-| ------------------ | ------------------------------------------ | ---------------------------------------- |
-| FRAPPE_PATH        | Frappe framework repository URL            | `https://github.com/frappe/frappe`       |
-| FRAPPE_BRANCH      | Frappe framework version                   | `version-15`                             |
-| APPS_JSON_BASE64   | Base64-encoded apps.json                   | `$(base64 -w 0 apps.json)`               |
-| PYTHON_VERSION     | Python version (optional)                  | `3.11`                                   |
-| NODE_VERSION       | Node.js version (optional)                 | `18.19.0`                                |
+| Arg              | Purpose                         | Example                            |
+| ---------------- | ------------------------------- | ---------------------------------- |
+| FRAPPE_PATH      | Frappe framework repository URL | `https://github.com/frappe/frappe` |
+| FRAPPE_BRANCH    | Frappe framework version        | `version-15`                       |
+| APPS_JSON_BASE64 | Base64-encoded apps.json        | `$(base64 -w 0 apps.json)`         |
+| PYTHON_VERSION   | Python version (optional)       | `3.11`                             |
+| NODE_VERSION     | Node.js version (optional)      | `18.19.0`                          |
 
 ### Verify Image Build
 
@@ -227,6 +227,7 @@ docker compose --project-name production \
 ```
 
 **Replace:**
+
 - `yourdomain.com`: Your actual domain name
 - `your-admin-password`: Administrator password for the site
 - `your-secure-db-password`: Database root password (same as in .env)
@@ -268,10 +269,12 @@ docker compose --project-name production -f docker-compose.production.yaml logs 
 ### Access Your Site
 
 Open your browser and navigate to:
+
 - HTTPS setup: `https://yourdomain.com`
 - HTTP setup: `http://your-server-ip:8080`
 
 Login with:
+
 - Username: `Administrator`
 - Password: The admin password you set during site creation
 
@@ -376,7 +379,8 @@ docker compose --project-name production \
 
 **Problem**: Build fails when fetching your custom app
 
-**Solution**: 
+**Solution**:
+
 - Verify repository URL and branch name in `apps.json`
 - Check network connectivity
 - For private repos, ensure SSH keys or tokens are configured correctly
@@ -386,6 +390,7 @@ docker compose --project-name production \
 **Problem**: `bench new-site` command fails
 
 **Solution**:
+
 - Check database connectivity: Verify `DB_HOST`, `DB_PORT`, and `DB_PASSWORD`
 - Ensure MariaDB container is running: `docker compose ps`
 - Check logs: `docker compose logs mariadb-database`
@@ -395,6 +400,7 @@ docker compose --project-name production \
 **Problem**: Custom app doesn't appear when running `list-apps`
 
 **Solution**:
+
 - Verify app was included in image: `docker compose exec backend ls apps/`
 - Check app name in `hooks.py` matches what you're trying to install
 - Rebuild image if app wasn't included
@@ -404,6 +410,7 @@ docker compose --project-name production \
 **Problem**: Site is not accessible from browser
 
 **Solution**:
+
 - For HTTPS: Verify DNS points to your server
 - Check `SITES_RULE` matches your domain
 - Verify Traefik is running: `docker compose ps`
