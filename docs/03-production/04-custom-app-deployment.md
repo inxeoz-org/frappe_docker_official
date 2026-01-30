@@ -11,6 +11,7 @@ To deploy a custom app in production, you need to:
 3. Configure environment variables to use your custom image
 4. Deploy using docker compose
 5. Create sites and install your app
+6. Verify deployment
 
 ## Prerequisites
 
@@ -162,7 +163,7 @@ LETSENCRYPT_EMAIL=admin@yourdomain.com
 - `SITES_RULE`: Domain routing rule for Traefik proxy
 - `LETSENCRYPT_EMAIL`: Email for SSL certificate notifications
 
-See [env-variables.md](../02-setup/04-env-variables.md) for complete list of available variables.
+See [04-env-variables.md](../02-setup/04-env-variables.md) for complete list of available variables.
 
 ## Step 4: Deploy with Docker Compose
 
