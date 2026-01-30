@@ -114,6 +114,8 @@ Detailed instructions are available in [`/docs/02-setup`](../02-setup)
 
 **This is the preferred approach for teams managing their own infrastructure.**
 
+> **For deploying custom apps in production**, see the complete step-by-step [Custom App Production Deployment Guide](../03-production/04-custom-app-deployment.md).
+
 ## Summary
 
 - Each setup serves a **distinct purpose**

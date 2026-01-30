@@ -1,5 +1,7 @@
 This guide walks you through building Frappe images from the repository resources.
 
+> **For Production Custom App Deployment:** See the comprehensive [Custom App Production Deployment Guide](../03-production/04-custom-app-deployment.md) for a complete end-to-end workflow including building, deploying, and updating custom apps in production.
+
 # Prerequisites
 
 - git
